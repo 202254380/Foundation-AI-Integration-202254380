@@ -1,26 +1,39 @@
-#Assignment 1 - Personal Portfolio
+# Personal Portfolio
 
-A responsive personal portfolio created for **SWE 363 Assignment 1**. It introduces me, presents my skills, and showcases my projects.
+A responsive personal portfolio created for **SWE 363 Assignment 1**. It introduces me, presents my skills and projects, and provides a way to contact me.
 
 ## Features
 
-* About Me and profile image
-* Skills and projects sections
-* Responsive design
-* Light and dark themes
+* About Me section with a profile image
+* Skills section
+* Two project cards
 * Contact form
-* Two clickable mini-projects
+* Responsive layout for desktop, tablet, and mobile
+* JavaScript light/dark theme toggle
 
 ## Projects
 
-* **IronLog Gym Tracker** — C# and ASP.NET Core
-* **FocusList To-Do App** — Java
+* **IronLog Gym Tracker** — A workout-tracking application using C#.
+* **FocusList To-Do App** — A task-management application using Java.
 
-Each project includes its own instructions inside its project folder.
+## Technologies
+
+* HTML
+* CSS
+* JavaScript
+* C#
+* Java
 
 ## Run Locally
 
-Open `index.html` directly, or run:
+Clone the repository:
+
+```bash
+git clone https://github.com/202254380/Foundation-AI-Integration-202254380.git
+cd Foundation-AI-Integration-202254380
+```
+
+Open `index.html` in a browser, or start a local server:
 
 ```bash
 python -m http.server 8000
@@ -28,9 +41,23 @@ python -m http.server 8000
 
 Then visit http://localhost:8000.
 
+## Project Structure
+
+```text
+├── index.html
+├── css/
+├── js/
+├── assets/
+├── projects/
+├── docs/
+└── README.md
+```
+
 ## AI Usage
 
-ChatGPT assisted with planning, code suggestions, debugging, and documentation. More details are available in [`docs/ai-usage-report.md`](docs/ai-usage-report.md).
+ChatGPT was used for planning, code suggestions, debugging, and documentation. All suggestions were reviewed, tested, and modified to fit the project.
+
+The complete AI usage report is available in [`docs/ai-usage-report.md`](docs/ai-usage-report.md). Technical information is available in [`docs/technical-documentation.md`](docs/technical-documentation.md).
 
 ## Author
 
