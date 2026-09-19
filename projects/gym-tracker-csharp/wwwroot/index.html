@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IronLog is a simple gym workout tracker built as a C# web project.">
+    <title>IronLog | Gym Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">IRON<span>LOG</span></a>
+      <a class="back-link" href="../../../index.html">← Portfolio</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">C# · ASP.NET Core</p>
+          <h1>Train with purpose.<br><span>Track every rep.</span></h1>
+          <p class="hero-copy">A focused workout log that keeps your training numbers clear and your progress measurable.</p>
+        </div>
+
+        <div class="stats" aria-label="Workout summary">
+          <div><strong id="workout-count">0</strong><span>Exercises</span></div>
+          <div><strong id="set-count">0</strong><span>Total sets</span></div>
+          <div><strong id="volume-count">0</strong><span>Volume (kg)</span></div>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <form id="workout-form" class="panel">
+          <div class="section-heading">
+            <p>New entry</p>
+            <h2>Log a workout</h2>
+          </div>
+
+          <label for="exercise">Exercise</label>
+          <input id="exercise" name="exercise" type="text" placeholder="e.g., Bench Press" required maxlength="40">
+
+          <div class="field-row">
+            <div>
+              <label for="sets">Sets</label>
+              <input id="sets" name="sets" type="number" min="1" max="20" value="3" required>
+            </div>
+            <div>
+              <label for="reps">Reps</label>
+              <input id="reps" name="reps" type="number" min="1" max="100" value="8" required>
+            </div>
+            <div>
+              <label for="weight">Weight (kg)</label>
+              <input id="weight" name="weight" type="number" min="0" max="1000" step="0.5" value="20" required>
+            </div>
+          </div>
+
+          <button class="primary-button" type="submit">Add exercise</button>
+
+          <div class="quick-picks" aria-label="Quick exercise choices">
+            <span>Quick pick:</span>
+            <button type="button" data-exercise="Bench Press">Bench</button>
+            <button type="button" data-exercise="Squat">Squat</button>
+            <button type="button" data-exercise="Deadlift">Deadlift</button>
+          </div>
+        </form>
+
+        <section class="panel log-panel" aria-labelledby="log-title">
+          <div class="section-heading heading-row">
+            <div>
+              <p>Today</p>
+              <h2 id="log-title">Workout log</h2>
+            </div>
+            <button class="text-button" id="clear-workouts" type="button">Clear all</button>
+          </div>
+
+          <div id="workout-list" class="workout-list"></div>
+          <p id="empty-state" class="empty-state">No exercises logged yet. Add your first one.</p>
+        </section>
+      </section>
+
+      <section class="coach-card">
+        <div>
+          <p class="eyebrow">Coach’s corner</p>
+          <p id="coach-tip">Consistency beats one perfect workout.</p>
+        </div>
+        <button id="new-tip" type="button">New tip</button>
+      </section>
+    </main>
+
+    <footer>IronLog · Built with C# and ASP.NET Core</footer>
+  </body>
+</html>

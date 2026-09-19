@@ -1,0 +1,305 @@
+:root {
+  --background: #f7f5ee;
+  --paper: #fffdf8;
+  --text: #17233f;
+  --muted: #687188;
+  --blue: #4263eb;
+  --blue-soft: #e9edff;
+  --yellow: #ffd968;
+  --green: #48a97c;
+  --border: #dedfdc;
+  --shadow: 0 22px 60px rgba(34, 49, 81, 0.1);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.55;
+}
+
+button,
+input,
+select { font: inherit; }
+
+button { cursor: pointer; }
+
+.topbar,
+main,
+footer {
+  width: min(1050px, calc(100% - 36px));
+  margin-inline: auto;
+}
+
+.topbar {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand,
+.back-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand { font-size: 19px; font-weight: 800; letter-spacing: -0.03em; }
+.brand span { color: var(--blue); }
+.back-link { color: var(--muted); font-size: 13px; font-weight: 700; }
+
+.intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: end;
+  gap: 80px;
+  padding: 85px 0 50px;
+}
+
+.date {
+  margin: 0 0 12px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p { margin-top: 0; }
+
+h1 {
+  margin-bottom: 20px;
+  font-size: clamp(3rem, 6.8vw, 5.8rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+h1 em { color: var(--blue); font-family: Georgia, serif; font-weight: 500; }
+
+.intro-copy {
+  max-width: 560px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.progress-card {
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.progress-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.progress-heading span,
+.progress-heading strong { display: block; }
+.progress-heading > div > span { margin-bottom: 3px; color: var(--muted); font-size: 11px; }
+.progress-heading strong { font-size: 20px; }
+
+.server-badge {
+  padding: 5px 8px;
+  border-radius: 100px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.progress-track {
+  height: 9px;
+  margin: 22px 0 12px;
+  overflow: hidden;
+  border-radius: 100px;
+  background: var(--blue-soft);
+}
+
+.progress-track span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--blue);
+  transition: width 200ms ease;
+}
+
+.progress-card > p { margin-bottom: 0; color: var(--muted); font-size: 12px; }
+
+.task-app {
+  margin-bottom: 80px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.add-task {
+  display: grid;
+  grid-template-columns: 1fr 135px auto;
+  gap: 10px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+input,
+select {
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  outline: 0;
+  background: #ffffff;
+  color: var(--text);
+}
+
+input:focus,
+select:focus { border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-soft); }
+
+.add-task button {
+  padding: 0 20px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--blue);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.task-toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 30px 0 22px;
+}
+
+.task-toolbar p { margin-bottom: 2px; color: var(--blue); font-size: 10px; font-weight: 800; text-transform: uppercase; }
+.task-toolbar h2 { margin-bottom: 0; font-size: 28px; letter-spacing: -0.04em; }
+
+.filters {
+  display: flex;
+  gap: 5px;
+  padding: 4px;
+  border-radius: 10px;
+  background: var(--background);
+}
+
+.filters button {
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.filters button.active { background: var(--paper); color: var(--blue); box-shadow: 0 2px 8px rgba(34, 49, 81, 0.08); }
+
+.task-list { display: grid; gap: 9px; }
+
+.task-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 15px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.task-item input { width: 19px; height: 19px; margin: 0; accent-color: var(--blue); }
+.task-copy strong,
+.task-copy span { display: block; }
+.task-copy strong { font-size: 14px; }
+.task-copy span { color: var(--muted); font-size: 10px; }
+.task-item.done .task-copy strong { color: var(--muted); text-decoration: line-through; }
+
+.delete-button {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--background);
+  color: var(--muted);
+}
+
+.delete-button:hover { background: #ffe6e2; color: #c84c3d; }
+
+.empty-state {
+  padding: 45px 20px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.empty-state > span {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 14px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.empty-state h3 { margin-bottom: 4px; color: var(--text); }
+.empty-state p { margin-bottom: 0; font-size: 13px; }
+
+.clear-button {
+  display: block;
+  margin: 25px auto 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  text-decoration: underline;
+}
+
+footer {
+  padding: 26px 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 760px) {
+  .intro { grid-template-columns: 1fr; gap: 40px; padding-top: 65px; }
+  .task-app { padding: 22px; }
+  .add-task { grid-template-columns: 1fr; }
+  .add-task button { min-height: 46px; }
+}
+
+@media (max-width: 480px) {
+  .task-toolbar { align-items: flex-start; flex-direction: column; }
+  .progress-heading { flex-direction: column; }
+}

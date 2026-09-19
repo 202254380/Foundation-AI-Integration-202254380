@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FocusList is a simple to-do list served by Java.">
+    <title>FocusList | Java To-Do App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span>✓</span> FocusList</a>
+      <a class="back-link" href="../../../index.html">Portfolio ↗</a>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <p class="date" id="today"></p>
+          <h1>Make space for<br><em>what matters.</em></h1>
+          <p class="intro-copy">A calm place to capture tasks, choose a focus, and enjoy the satisfaction of finishing.</p>
+        </div>
+
+        <div class="progress-card">
+          <div class="progress-heading">
+            <div>
+              <span>Daily progress</span>
+              <strong id="progress-label">0% complete</strong>
+            </div>
+            <span class="server-badge" id="server-status">Checking Java…</span>
+          </div>
+          <div class="progress-track"><span id="progress-bar"></span></div>
+          <p id="progress-message">Add a task to begin your day.</p>
+        </div>
+      </section>
+
+      <section class="task-app" aria-labelledby="tasks-title">
+        <form id="task-form" class="add-task">
+          <label class="sr-only" for="task-input">New task</label>
+          <input id="task-input" name="task" type="text" placeholder="What needs to be done?" required maxlength="80">
+          <label class="sr-only" for="category">Category</label>
+          <select id="category" name="category">
+            <option>Personal</option>
+            <option>Study</option>
+            <option>Work</option>
+            <option>Health</option>
+          </select>
+          <button type="submit">Add task</button>
+        </form>
+
+        <div class="task-toolbar">
+          <div>
+            <p>My tasks</p>
+            <h2 id="tasks-title">Today’s focus</h2>
+          </div>
+          <div class="filters" aria-label="Filter tasks">
+            <button class="active" type="button" data-filter="all">All</button>
+            <button type="button" data-filter="open">Open</button>
+            <button type="button" data-filter="done">Done</button>
+          </div>
+        </div>
+
+        <div id="task-list" class="task-list"></div>
+        <div id="empty-state" class="empty-state">
+          <span>✓</span>
+          <h3>Your list is clear</h3>
+          <p>Add a task above when you’re ready.</p>
+        </div>
+
+        <button class="clear-button" id="clear-completed" type="button">Clear completed tasks</button>
+      </section>
+    </main>
+
+    <footer>FocusList · Served with Java</footer>
+  </body>
+</html>
