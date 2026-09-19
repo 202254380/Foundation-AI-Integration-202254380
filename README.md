@@ -1,6 +1,6 @@
 #Assignment 1 - Personal Portfolio
 
-A responsive personal portfolio created for **SWE 333 Assignment 1**. It introduces me, presents my skills, and showcases my projects.
+A responsive personal portfolio created for **SWE 363 Assignment 1**. It introduces me, presents my skills, and showcases my projects.
 
 ## Features
 
